@@ -1,48 +1,35 @@
 # ViewGram
 
-A dead-simple Instagram profile planner. No signup, no data leaving your browser, just drag, drop and preview.
+A dumb simple Instagram preview thing I made because I kept screwing up my grid.
 
-I built this because I got tired of guessing how my grid would look after posting. Now I can upload drafts, shuffle them around, and see the whole thing before anything goes live.
+Basically:
+- Drag/drop images to build your feed
+- Edit your profile (name, bio, link, stats) 
+- Click any post to tweak caption/likes/comments
+- See a live mobile preview as you go
+- Everything stays in your browser - nothing leaves your machine
 
-## What it does
-
-- Edit your profile picture, username, bio, link and stats
-- Add posts by URL or drag-and-drop upload
-- Reorder your grid with drag and drop
-- Click any post to tweak captions, likes and comments
-- Live mobile-style preview as you edit
-- Everything saves to your browser's local storage
+I use this before I actually post. Saves me from those "wait that doesn't look right" moments after hitting share.
 
 ## Stack
-
 - Next.js 16 + React 18
-- TypeScript
+- TypeScript (because I like not yelling at undefined)
 - Tailwind CSS
-- @dnd-kit for sorting
-- Lucide icons
+- @dnd-kit for the drag/drop stuff
+- Lucide icons (they're clean)
 
-## Run it locally
-
+## Running it
 ```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open http://localhost:3000
 
-## Build for production
+## For the server
+I run this on my Ubuntu box with PM2. There's an ecosystem.config.js in the root - just point nginx at port 3002 (or whatever you set) and you're good.
 
-```bash
-npm run build
-npm start
-```
+## One last thing
+This is NOT affiliated with Instagram. Can't post, can't schedule, can't do anything but let you preview. It's a sandbox, not a manager.
 
-I usually run the production build through PM2 using the included `ecosystem.config.js`.
-
-## Disclaimer
-
-ViewGram is not affiliated with Instagram and can't post or manage your account. It's purely a visual planner.
-
-## License
-
-Do whatever you want with it. Built by [Yivani](https://yivani.dev).
+If you find it useful, cool. If not, whatever. Made by Yivani (yivani.dev).
